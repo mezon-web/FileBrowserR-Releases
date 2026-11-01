@@ -4,22 +4,22 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 
 ## ダウンロード
 
-現在の公開版は **v0.2.13 / Windows 11 x64** です。
+現在の公開版は **v0.2.14 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（v0.2.13・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.13/FileBrowserR-v0.2.13-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.13/FileBrowserR-v0.2.13-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.13) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（v0.2.14・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.14/FileBrowserR-v0.2.14-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.14/FileBrowserR-v0.2.14-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.14) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-.NET 10 / Windows Desktop Runtimeを同梱しているため、実行環境の追加インストールは不要です。表示は日本語のみで、翻訳用DLLは日本語の`ja`フォルダーだけを同梱します。
+関連DLL・日本語リソース・.NET 10 / Windows Desktop Runtimeは`FileBrowserR.exe`に内包しています。配布フォルダーに`ja`やDLL類は置かず、実行環境の追加インストールも不要です。表示は日本語のみです。
 
 ## 起動方法
 
 1. ZIPをダウンロードし、書き込み可能なフォルダーへ全体を展開します。
-2. `FileBrowserR-v0.2.13-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
+2. `FileBrowserR-v0.2.14-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
 3. フォルダーは左のツリーやアドレスバーから開けます。必要に応じて「2分割」をオンにします。
 
-同梱のDLLやランタイムも必要です。実行ファイルを含むフォルダー全体を保持してください。
+実行に必要なファイルはEXEへまとめています。使い方と依存ライセンスは文書として添付しています。起動時に必要なネイティブライブラリは通常`%TEMP%\.net`へ自動展開し、以後再利用します。
 
 通常のファイル操作や機能表示は一般ユーザー権限で動作します。管理者権限を使う容量スキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーを自動で導入する機能はありません。
 
@@ -55,19 +55,21 @@ Windowsの既定ファイラーやファイルの関連付けは変更しませ�
 ZIPとSHA-256ファイルを保存し、PowerShellで次を実行して値を照合できます。
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.13-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.13-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.14-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.14-win-x64.sha256
 ```
 
 GitHubが自動表示する **Source code (zip / tar.gz)** は、この配布案内リポジトリの文書です。アプリ本体は上の名前付きZIPをダウンロードしてください。このリポジトリは配布物と案内用で、アプリのソースコードは含みません。
 
 ## 検証とライセンス
 
-v0.2.13では日本語以外の12言語分・144個の翻訳用DLLを除外し、日本語リソースの保持と、隔離したWindowsデスクトップでの起動8判定を確認しています。ファイル操作やUIの全回帰検査は今回再実施していません。物理マウスでのドラッグ、実エクスプローラーとのOLEドラッグ＆ドロップ、実NAS・実UAC・実機センサーの網羅確認は未実施です。詳しい範囲はZIP内の `検証結果.md` を参照してください。
+v0.2.14ではEXE内の日本語リソース・依存ファイルを検査し、EXEだけを別フォルダーにコピーして、空の展開キャッシュから起動11判定を確認しています。検査は隔離したWindowsデスクトップを使用しました。ファイル操作やUIの全回帰検査は今回再実施していません。物理マウスでのドラッグ、実エクスプローラーとのOLEドラッグ＆ドロップ、実NAS・実UAC・実機センサーの網羅確認は未実施です。詳しい範囲はZIP内の `検証結果.md` を参照してください。
 
 依存ライブラリのライセンスと通知はZIP内の `THIRD_PARTY.md`、`SharpCompress.LICENSE.txt`、`licenses` フォルダーに収録しています。
 
 ## 更新履歴
+
+- [v0.2.14 — 関連DLLと日本語リソースをEXEへ内包](release-notes/v0.2.14.md)
 
 - [v0.2.13 — 日本語だけの配布構成](release-notes/v0.2.13.md)
 
