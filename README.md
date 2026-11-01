@@ -4,19 +4,19 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 
 ## ダウンロード
 
-現在の公開版は **v0.2.12 / Windows 11 x64** です。
+現在の公開版は **v0.2.13 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（v0.2.12・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.12/FileBrowserR-v0.2.12-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.12/FileBrowserR-v0.2.12-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.12) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（v0.2.13・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.13/FileBrowserR-v0.2.13-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.13/FileBrowserR-v0.2.13-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.13) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-.NET 10 / Windows Desktop Runtimeを同梱しているため、実行環境の追加インストールは不要です。
+.NET 10 / Windows Desktop Runtimeを同梱しているため、実行環境の追加インストールは不要です。表示は日本語のみで、翻訳用DLLは日本語の`ja`フォルダーだけを同梱します。
 
 ## 起動方法
 
 1. ZIPをダウンロードし、書き込み可能なフォルダーへ全体を展開します。
-2. `FileBrowserR-v0.2.12-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
+2. `FileBrowserR-v0.2.13-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
 3. フォルダーは左のツリーやアドレスバーから開けます。必要に応じて「2分割」をオンにします。
 
 同梱のDLLやランタイムも必要です。実行ファイルを含むフォルダー全体を保持してください。
@@ -55,19 +55,21 @@ Windowsの既定ファイラーやファイルの関連付けは変更しませ�
 ZIPとSHA-256ファイルを保存し、PowerShellで次を実行して値を照合できます。
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.12-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.12-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.13-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.13-win-x64.sha256
 ```
 
 GitHubが自動表示する **Source code (zip / tar.gz)** は、この配布案内リポジトリの文書です。アプリ本体は上の名前付きZIPをダウンロードしてください。このリポジトリは配布物と案内用で、アプリのソースコードは含みません。
 
 ## 検証とライセンス
 
-v0.2.12では隔離したWindowsデスクトップでUI77判定と、配布ZIPの起動8判定を確認しています。物理マウスでのドラッグ、実エクスプローラーとのOLEドラッグ＆ドロップ、実NAS・実UAC・実機センサーの網羅確認は未実施です。詳しい範囲はZIP内の `検証結果.md` を参照してください。
+v0.2.13では日本語以外の12言語分・144個の翻訳用DLLを除外し、日本語リソースの保持と、隔離したWindowsデスクトップでの起動8判定を確認しています。ファイル操作やUIの全回帰検査は今回再実施していません。物理マウスでのドラッグ、実エクスプローラーとのOLEドラッグ＆ドロップ、実NAS・実UAC・実機センサーの網羅確認は未実施です。詳しい範囲はZIP内の `検証結果.md` を参照してください。
 
 依存ライブラリのライセンスと通知はZIP内の `THIRD_PARTY.md`、`SharpCompress.LICENSE.txt`、`licenses` フォルダーに収録しています。
 
 ## 更新履歴
+
+- [v0.2.13 — 日本語だけの配布構成](release-notes/v0.2.13.md)
 
 - [v0.2.12 — 初回公開・選択表示とドラッグ範囲](release-notes/v0.2.12.md)
 
