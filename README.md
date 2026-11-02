@@ -4,11 +4,11 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 
 ## ダウンロード
 
-現在の公開版は **v0.2.21 / Windows 11 x64** です。
+現在の公開版は **v0.2.22 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（v0.2.21・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.21/FileBrowserR-v0.2.21-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.21/FileBrowserR-v0.2.21-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.21) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（v0.2.22・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.22/FileBrowserR-v0.2.22-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.22/FileBrowserR-v0.2.22-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.22) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
 関連DLL・日本語リソース・.NET 10 / Windows Desktop Runtimeは`FileBrowserR.exe`に内包しています。配布フォルダーに`ja`やDLL類は置かず、実行環境の追加インストールも不要です。表示は日本語のみです。
@@ -16,7 +16,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 ## 起動方法
 
 1. ZIPをダウンロードし、書き込み可能なフォルダーへ全体を展開します。
-2. `FileBrowserR-v0.2.21-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
+2. `FileBrowserR-v0.2.22-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
 3. フォルダーは左のツリーやアドレスバーから開けます。1画面の右上「＋」で左右2分割へ切り替えられます。
 
 実行に必要なファイルはEXEへまとめています。使い方と依存ライセンスは文書として添付しています。起動時に必要なネイティブライブラリは通常`%TEMP%\.net`へ自動展開し、以後再利用します。
@@ -26,6 +26,8 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 Windowsの既定ファイラーやファイルの関連付けは変更しません。
 
 v0.2.21では `FileBrowserR.exe --compare "左のパス" "右のパス"` で比較画面を直接開いて開始できます。`--differences-only` を添えると違い・未確認の項目だけを表示します。相対パスはコマンドを実行したフォルダーが基準です。
+
+v0.2.22ではマウスのサイドボタンで戻る／進むに対応しました。通常一覧はマウスがあるペインの履歴を操作し、比較のフォルダー・本文とディスク使用量でも使えます。本文上部には、元の比較一覧へ戻る「↑」を追加しました。
 
 ## 主な機能
 
@@ -68,21 +70,23 @@ v0.2.20では比較をフォルダー単位で移動できるようにしまし�
 ZIPとSHA-256ファイルを保存し、PowerShellで次を実行して値を照合できます。
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.21-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.21-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.22-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.22-win-x64.sha256
 ```
 
 GitHubが自動表示する **Source code (zip / tar.gz)** は、この配布案内リポジトリの文書です。アプリ本体は上の名前付きZIPをダウンロードしてください。このリポジトリは配布物と案内用で、アプリのソースコードは含みません。
 
 ## 検証とライセンス
 
-v0.2.21ではCLI専用3判定と比較の回帰23判定、配布EXE単体の起動・ワーカー15判定を確認しました。フォルダー／本文の自動比較、違いだけの表示、日本語・空白・相対パス、通常タブの保持と比較元ファイルのハッシュ一致を検査しています。
+v0.2.22ではサイドボタン専用2判定、比較25判定、中クリック回帰3判定を確認しました。通常一覧の左右独立した履歴、比較のフォルダー・本文の戻る／進む、ディスク使用量の内蔵／別窓、本文上部の「↑」からの復帰を検査しています。
 
-検査は隔離したWindowsデスクトップで行いました。実NAS・物理入力・Windows標準ダイアログの全状態は今回未確認です。0.2.20の全体テーマ検査などと区別して、詳しい範囲をZIP内の検証結果.mdに記載しています。
+隔離Win32デスクトップ内のWPFイベント・描画による検査です。ライト／ダーク、13／20 DIPの文字、1280／900 DIPのウィンドウで新しいボタンの表示を確認。実マウスの物理ボタン・メーカー独自ドライバー・実NASは今回未確認です。配布EXE単体の起動・CLI・ワーカー15判定とZIPのハッシュ・個人情報混入も検査して公開しています。詳しくは同梱の検証結果.mdと更新内容を参照してください。
 
 依存ライブラリのライセンスと通知はZIP内の `THIRD_PARTY.md`、`SharpCompress.LICENSE.txt`、`licenses` フォルダーに収録しています。
 
 ## 更新履歴
+
+- [v0.2.22 — マウスのサイドボタンと本文上部の親ボタン](release-notes/v0.2.22.md)
 
 - [v0.2.21 — CLIから比較を直接起動](release-notes/v0.2.21.md)
 
