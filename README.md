@@ -6,12 +6,12 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 
 現在の公開版は **v0.2.23 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（v0.2.23・ランタイム同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.23/FileBrowserR-v0.2.23-win-x64.zip)**
+- **[最新版をダウンロード（v0.2.23・ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.23/FileBrowserR-v0.2.23-win-x64.zip)**
 - [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.23/FileBrowserR-v0.2.23-win-x64.sha256)
 - [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.23) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-関連DLL・日本語リソース・.NET 10 / Windows Desktop Runtimeは`FileBrowserR.exe`に内包しています。配布フォルダーに`ja`やDLL類は置かず、実行環境の追加インストールも不要です。表示は日本語のみです。
+アプリの依存DLLは`FileBrowserR.exe`に内包しています。.NETは同梱していません。[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)を別途インストールしてください。表示は日本語のみです。
 
 ## 起動方法
 
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きの詳細一
 2. `FileBrowserR-v0.2.23-win-x64` フォルダー内の `FileBrowserR.exe` を起動します。
 3. フォルダーは左のツリーやアドレスバーから開けます。1画面の右上「＋」で左右2分割へ切り替えられます。
 
-実行に必要なファイルはEXEへまとめています。使い方と依存ライセンスは文書として添付しています。起動時に必要なネイティブライブラリは通常`%TEMP%\.net`へ自動展開し、以後再利用します。
+アプリと依存ライブラリはEXEへまとめています。使い方と依存ライセンスは文書として添付しています。起動時に必要なネイティブライブラリは通常`%TEMP%\.net`へ自動展開し、以後再利用します。
 
 通常のファイル操作や機能表示は一般ユーザー権限で動作します。管理者権限を使う容量スキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーを自動で導入する機能はありません。
 
@@ -113,3 +113,4 @@ v0.2.23では既存の比較25判定、パス安全性・ツリー再試行7判�
 - [v0.2.12 — 初回公開・選択表示とドラッグ範囲](release-notes/v0.2.12.md)
 
 <!-- 次回公開時は版番号・ダウンロード直リンク・展開先名を更新し、匿名ダウンロードとハッシュを確認する。GitHub Actionsは使用しない。 -->
+
