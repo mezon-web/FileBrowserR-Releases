@@ -4,14 +4,14 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.68 / Windows 11 x64** です。
+現在の公開版は **v0.2.69 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.68/FileBrowserR-v0.2.68-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.68/FileBrowserR-v0.2.68-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.68) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.69/FileBrowserR-v0.2.69-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.69/FileBrowserR-v0.2.69-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.69) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-ファイル一覧の右クリックメニューから「フォルダーへコピー…」「フォルダーへ移動…」を外しました。
+ファイル一覧の右クリックメニューから「フォルダー容量を計算」を外しました。
 
 **[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)が必要です。** .NET本体は同梱していません。アプリの依存DLLは`FileBrowserR.exe`へ内包し、表示は日本語のみです。
 
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.68-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.69-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -62,8 +62,8 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.68-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.68-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.69-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.69-win-x64.sha256
 ```
 
 ## 同梱ファイル
@@ -71,6 +71,8 @@ Get-Content .\FileBrowserR-v0.2.68-win-x64.sha256
 展開したフォルダーには、`FileBrowserR.exe`、`使い方.md`、ライセンス通知をまとめた `licenses` フォルダーが入っています。
 
 ## 更新履歴
+
+- [v0.2.69 — 右クリックメニューの容量計算を整理](release-notes/v0.2.69.md)
 
 - [v0.2.68 — ファイル一覧の右クリックメニューを整理](release-notes/v0.2.68.md)
 
