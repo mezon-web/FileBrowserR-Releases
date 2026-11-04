@@ -4,11 +4,11 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.48 / Windows 11 x64** です。
+現在の公開版は **v0.2.49 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.48/FileBrowserR-v0.2.48-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.48/FileBrowserR-v0.2.48-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.48) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.49/FileBrowserR-v0.2.49-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.49/FileBrowserR-v0.2.49-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.49) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
 **[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)が必要です。** .NET本体は同梱していません。アプリの依存DLLは`FileBrowserR.exe`へ内包し、表示は日本語のみです。
@@ -17,7 +17,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.48-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.49-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -41,6 +41,8 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ディスク使用量は「スキャン → 中止 → 管理者」の順です。スキャンを青系の背景・枠で強調します。サンバースト・アイシクル・ツリーマップの色付き領域は濃い背景と白い文字で表示し、中央の説明はテーマに追従します。
 
+ファイル一覧と比較一覧ではEXEごとのアイコンを表示します。メモリマップの下部には選択したアプリの概要が表示され、「内訳」から個別のPIDを選べます。システムモニターの「表示・更新…」では、項目名をクリックして上下ボタンで移動するか、つまみをドラッグして並べ替えられます。
+
 ## コマンドラインから比較
 
 ```powershell
@@ -58,17 +60,19 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.48-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.48-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.49-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.49-win-x64.sha256
 ```
 
 ## 検証とライセンス
 
-画面検査は隔離Win32デスクトップで実施し、通常デスクトップの入力・クリップボードには触れていません。今回の関連39判定と単独EXEの配布検査を確認しています。物理入力・実UAC・実NAS・実DPI切替・長時間運用は今回未確認です。詳しくは同梱の`検証結果.md`と更新内容を参照してください。
+画面検査は隔離Win32デスクトップで実施し、通常デスクトップの入力・クリップボードには触れていません。今回の関連157判定と単独EXEの配布検査を確認しています。物理入力・実UAC・実NAS・実DPI切替・長時間運用は今回未確認です。詳しくは同梱の`検証結果.md`と更新内容を参照してください。
 
 依存ソフトウェアのライセンス通知はZIP内の`licenses`と`THIRD_PARTY.md`へ同梱しています。
 
 ## 更新履歴
+
+- [v0.2.49 — EXEアイコン、メモリの内訳、モニターの並べ替え](release-notes/v0.2.49.md)
 
 - [v0.2.48 — ディスク操作・マップの読みやすさと比較機能の更新](release-notes/v0.2.48.md)
 
