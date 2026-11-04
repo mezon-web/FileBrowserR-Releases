@@ -4,12 +4,14 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.49 / Windows 11 x64** です。
+現在の公開版は **v0.2.53 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.49/FileBrowserR-v0.2.49-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.49/FileBrowserR-v0.2.49-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.49) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.53/FileBrowserR-v0.2.53-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.53/FileBrowserR-v0.2.53-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.53) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
+
+音量ミキサーの「アプリ別」にWindowsの登録名とアプリアイコンを表示します。前回の公開版から、左ツリーの行間と選択色、大量のファイルを扱うときのメモリ使用量も改善しました。
 
 **[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)が必要です。** .NET本体は同梱していません。アプリの依存DLLは`FileBrowserR.exe`へ内包し、表示は日本語のみです。
 
@@ -17,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.49-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.53-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -60,17 +62,19 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.49-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.49-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.53-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.53-win-x64.sha256
 ```
 
 ## 検証とライセンス
 
-画面検査は隔離Win32デスクトップで実施し、通常デスクトップの入力・クリップボードには触れていません。今回の関連157判定と単独EXEの配布検査を確認しています。物理入力・実UAC・実NAS・実DPI切替・長時間運用は今回未確認です。詳しくは同梱の`検証結果.md`と更新内容を参照してください。
+画面検査は隔離Win32デスクトップで実施し、通常デスクトップの入力・クリップボードには触れていません。v0.2.53ではGUI検査85件と単独EXEの配布検査20件が合格しました。物理入力・実UAC・実NAS・実DPI切替・長時間運用は今回未確認です。詳しくは同梱の`検証結果.md`と更新内容を参照してください。
 
 依存ソフトウェアのライセンス通知はZIP内の`licenses`と`THIRD_PARTY.md`へ同梱しています。
 
 ## 更新履歴
+
+- [v0.2.53 — 音量ミキサーのアプリアイコン、ツリー表示とメモリ使用量の改善](release-notes/v0.2.53.md)
 
 - [v0.2.49 — EXEアイコン、メモリの内訳、モニターの並べ替え](release-notes/v0.2.49.md)
 
