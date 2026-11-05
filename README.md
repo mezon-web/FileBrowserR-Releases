@@ -4,14 +4,14 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.71 / Windows 11 x64** です。
+現在の公開版は **v0.2.72 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.71/FileBrowserR-v0.2.71-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.71/FileBrowserR-v0.2.71-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.71) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.72/FileBrowserR-v0.2.72-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.72/FileBrowserR-v0.2.72-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.72) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-コピー・移動・書庫展開の保存先画面で、操作内容と保存先を分かりやすく表示します。
+ランチャーの表記、圧縮・展開メニューの位置、ディスクの削除案内、ガイド検索と取消表示を改善しました。
 
 **[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)が必要です。** .NET本体は同梱していません。アプリの依存DLLは`FileBrowserR.exe`へ内包し、表示は日本語のみです。
 
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.71-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.72-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -41,7 +41,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 比較条件を変えると「再比較待ち」と表示し、「再比較」で更新します。自動では開始しません。比較は読み取り専用です。比較アイコンの再クリックや「ファイル管理に戻る」で比較を終了すると結果を破棄します。
 
-ディスク使用量は「スキャン → 中止 → 管理者」の順です。スキャンを青系の背景・枠で強調します。サンバースト・アイシクル・ツリーマップの色付き領域は濃い背景と白い文字で表示し、中央の説明はテーマに追従します。
+ディスク使用量は「スキャン → 中止 → 管理者(高速)」の順です。スキャンを青系の背景・枠で強調します。サンバースト・アイシクル・ツリーマップの色付き領域は濃い背景と白い文字で表示し、中央の説明はテーマに追従します。
 
 ファイル一覧と比較一覧ではEXEごとのアイコンを表示します。メモリマップの下部には選択したアプリの概要が表示され、「内訳」から個別のPIDを選べます。システムモニターの「表示 ▾」→「表示・更新…」では、項目名をクリックして上下ボタンで移動するか、つまみをドラッグして並べ替えられます。
 
@@ -62,8 +62,8 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.71-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.71-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.72-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.72-win-x64.sha256
 ```
 
 ## 同梱ファイル
@@ -71,6 +71,8 @@ Get-Content .\FileBrowserR-v0.2.71-win-x64.sha256
 展開したフォルダーには、`FileBrowserR.exe`、`使い方.md`、ライセンス通知をまとめた `licenses` フォルダーが入っています。
 
 ## 更新履歴
+
+- [v0.2.72 — メニュー・削除案内・ガイド検索と取消表示を改善](release-notes/v0.2.72.md)
 
 - [v0.2.71 — 保存先画面の説明を整理](release-notes/v0.2.71.md)
 
