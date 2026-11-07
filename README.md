@@ -4,14 +4,14 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.76 / Windows 11 x64** です。
+現在の公開版は **v0.2.77 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.76/FileBrowserR-v0.2.76-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.76/FileBrowserR-v0.2.76-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.76) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.77/FileBrowserR-v0.2.77-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.77/FileBrowserR-v0.2.77-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.77) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
-操作後のメモリ保持、一覧の並べ替え、書庫展開、設定保存と大量更新の処理を改善しました。
+音量ミキサーのミュート操作、同名アプリの補足と別出力の目印を改善し、音声処理と表示更新の負荷を減らしました。
 
 **[.NET 10 Desktop Runtime x64](https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0)が必要です。** .NET本体は同梱していません。アプリの依存DLLは`FileBrowserR.exe`へ内包し、表示は日本語のみです。
 
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.76-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.77-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -62,8 +62,8 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.76-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.76-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.77-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.77-win-x64.sha256
 ```
 
 ## 同梱ファイル
@@ -71,6 +71,8 @@ Get-Content .\FileBrowserR-v0.2.76-win-x64.sha256
 展開したフォルダーには、`FileBrowserR.exe`、`使い方.md`、`licenses` フォルダーが入っています。`licenses` には「ライセンス一覧.md」と「ライセンス全文.txt」を収録しています。
 
 ## 更新履歴
+
+- [v0.2.77 — 音量ミキサーの操作・識別表示と処理負荷の改善](release-notes/v0.2.77.md)
 
 - [v0.2.76 — メモリ使用と一覧・設定保存の改善](release-notes/v0.2.76.md)
 
