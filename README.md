@@ -4,11 +4,11 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.79 / Windows 11 x64** です。
+現在の公開版は **v0.2.80 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.79/FileBrowserR-v0.2.79-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.79/FileBrowserR-v0.2.79-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.79) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.80/FileBrowserR-v0.2.80-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.80/FileBrowserR-v0.2.80-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.80) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
 一覧先頭の「..」から親フォルダーへ戻れます。表示は専用設定画面の「ファイル一覧」でON/OFFできます（初期状態はON）。
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.79-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.80-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -62,8 +62,8 @@ FileBrowserR.exe --portable
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.79-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.79-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.80-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.80-win-x64.sha256
 ```
 
 ## 同梱ファイル
@@ -72,7 +72,11 @@ Get-Content .\FileBrowserR-v0.2.79-win-x64.sha256
 
 ## 更新履歴
 
-- [v0.2.79 — PDFなどのファイル種別アイコン表示を修正](release-notes/v0.2.79.md)
+- [v0.2.80 — 親フォルダー行・設定保存・ツリーと取り消しの改善](release-notes/v0.2.80.md)
+
+- [v0.2.79 — 親フォルダー行と専用設定画面](release-notes/v0.2.79.md)
+
+- [v0.2.78 — PDFなどのファイル種別アイコン表示を修正](release-notes/v0.2.78.md)
 
 - [v0.2.77 — 音量ミキサーの操作・識別表示と処理負荷の改善](release-notes/v0.2.77.md)
 
