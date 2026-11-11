@@ -4,11 +4,11 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 ## ダウンロード
 
-現在の公開版は **v0.2.80 / Windows 11 x64** です。
+現在の公開版は **v0.2.81 / Windows 11 x64** です。
 
-- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.80/FileBrowserR-v0.2.80-win-x64.zip)**
-- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.80/FileBrowserR-v0.2.80-win-x64.sha256)
-- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.80) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
+- **[最新版をダウンロード（ランタイム非同梱ZIP）](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.81/FileBrowserR-v0.2.81-win-x64.zip)**
+- [ZIPのSHA-256](https://github.com/mezon-web/FileBrowserR-Releases/releases/download/v0.2.81/FileBrowserR-v0.2.81-win-x64.sha256)
+- [更新内容](https://github.com/mezon-web/FileBrowserR-Releases/releases/tag/v0.2.81) · [過去バージョン](https://github.com/mezon-web/FileBrowserR-Releases/releases)
 - [詳しい使い方](使い方.md)
 
 一覧先頭の「..」から親フォルダーへ戻れます。表示は専用設定画面の「ファイル一覧」でON/OFFできます（初期状態はON）。
@@ -19,7 +19,7 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 1. .NET 10 Desktop Runtime x64をインストールします。
 2. ZIPを新しいフォルダーへ展開します。
-3. `FileBrowserR-v0.2.80-win-x64`内の`FileBrowserR.exe`を起動します。
+3. `FileBrowserR-v0.2.81-win-x64`内の`FileBrowserR.exe`を起動します。
 
 通常のファイル操作と機能表示は一般ユーザー権限で動作します。管理者のディスクスキャンや温度取得は、機能内で明示的に選んだときだけ専用ワーカーを起動します。ドライバーの自動導入や、Windowsの既定ファイラー・関連付けの変更は行いません。
 
@@ -37,7 +37,9 @@ Windows 11 x64向けの日本語ファイラーです。タブ付きのファイ
 
 左端のアイコンでツリー・お気に入り・履歴を開閉できます。左右2分割では、操作対象のペインの現在地へツリーが追従します。右端の機能アイコンは再クリックでペインを収納し、もう一度押すと状態を保って開きます。分離ウィンドウのアイコンは前面化します。アイコンは上下へドラッグして並べ替えできます。
 
-左右にフォルダーを開いている場合は、上部の「左右のフォルダーを比較」で直接比較できます。比較一覧は左右2ペイン／統合、ツリー／ファイルのみを切り替えられます。フォルダーや、書庫内比較を有効にした書庫は一覧上で展開できます。表示項目・列は一覧上で、比較方法や書庫内比較などの条件は「比較設定…」で変更します。
+左右にフォルダーを開いている場合は、上部の「左右を比較」で直接比較できます。比較一覧は左右2ペイン／統合、ツリー／ファイルのみを切り替えられます。フォルダーや、書庫内比較を有効にした書庫は一覧上で展開できます。表示項目・列は一覧上で、比較方法や書庫内比較などの条件は「比較設定…」で変更します。
+
+ランチャーでは、登録項目をドラッグして並べ替えられます。空き領域の右クリックで登録や配置の取り消し、項目の右クリックで編集やグループ移動ができます。
 
 比較条件を変えると「再比較待ち」と表示し、「再比較」で更新します。自動では開始しません。比較は読み取り専用です。比較アイコンの再クリックや「ファイル管理に戻る」で比較を終了すると結果を破棄します。
 
@@ -57,13 +59,13 @@ FileBrowserR.exe --portable
 
 ## 設定と更新
 
-通常の設定はWindowsのユーザー別アプリデータへ保存します。`--portable`ではEXEの隣の`UserData`を使います。更新時はアプリを終了し、新しいZIPを別のフォルダーへ展開してください。設定・履歴を含む`UserData`を他の人へ配布しないでください。
+設定画面はメニューバーの「ヘルプ」の右にある「設定」、または「ツール」の「設定…」から開けます。通常の設定はWindowsのユーザー別アプリデータへ保存します。`--portable`ではEXEの隣の`UserData`を使います。更新時はアプリを終了し、新しいZIPを別のフォルダーへ展開してください。設定・履歴を含む`UserData`を他の人へ配布しないでください。
 
 ## ファイルの確認
 
 ```powershell
-Get-FileHash .\FileBrowserR-v0.2.80-win-x64.zip -Algorithm SHA256
-Get-Content .\FileBrowserR-v0.2.80-win-x64.sha256
+Get-FileHash .\FileBrowserR-v0.2.81-win-x64.zip -Algorithm SHA256
+Get-Content .\FileBrowserR-v0.2.81-win-x64.sha256
 ```
 
 ## 同梱ファイル
@@ -71,6 +73,8 @@ Get-Content .\FileBrowserR-v0.2.80-win-x64.sha256
 展開したフォルダーには、`FileBrowserR.exe`、`使い方.md`、`licenses` フォルダーが入っています。`licenses` には「ライセンス一覧.md」と「ライセンス全文.txt」を収録しています。
 
 ## 更新履歴
+
+- [v0.2.81 — ランチャーの操作とメニューバーの改善](release-notes/v0.2.81.md)
 
 - [v0.2.80 — 親フォルダー行・設定保存・ツリーと取り消しの改善](release-notes/v0.2.80.md)
 
